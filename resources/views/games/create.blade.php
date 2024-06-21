@@ -1,13 +1,13 @@
 <x-layout>
 
-  
+  <h1 class="mt-150 text-white text-shadow text-center">Add Game to List</h1>
     <x-errandsuc />
 
 
     <form 
        method="POST" 
        action="{{route('games.store')}}"
-       class="bg-body-secondary p-3 rounded-4 shadow mt-5"
+       class="bg-body-secondary p-3 mt-2 rounded-4 shadow form"
        enctype="multipart/form-data">
     @csrf
         <div class="mb-3">
@@ -23,11 +23,6 @@
           <input name="img" class="form-control shadow" type="file" id="img">
         </div>
         <button type="submit" class="btn btn-secondary shadow mt-3">Salva</button>
-
     </form>
-
-  
-
-
 
 </x-layout>

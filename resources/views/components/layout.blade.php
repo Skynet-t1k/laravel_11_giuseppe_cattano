@@ -8,17 +8,19 @@
     
   </head>
   <body>
-    <div class="background-container"></div>
 
-    <div class="wrapper">
+        
 
-    <x-navbar />
+        <div class="background-container">
+        
+          <x-navbar />
 
-      <div class="content">
         {{$slot}}
-      </div>
+      
    
-    <x-footer />
+        <x-footer />
+      </div>
+
 
   </div>
   </body>

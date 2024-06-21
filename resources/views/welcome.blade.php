@@ -1,9 +1,9 @@
 <x-layout>
     
-
-    <h1 class="text-center text-white text-shadow my-5">🎮 Benvenuti nel nostro Angolo dei Giochi Preferiti! 🎮</h1>
-    <div class="row my-5">
-        <div class="col12 col-md-6">
+    
+    <h1 class="text-center mt-150 text-white text-shadow">🎮 Benvenuti nel nostro Angolo dei Giochi Preferiti! 🎮</h1>
+    <div class="row my-5 d-flex justify-content-center customp">
+        <div class="col-12 col-md-12 col-xl-6 d-flex justify-content-center">
             <p class="text-white lead pwelcome">Scopri un mondo di avventure, strategia
              e divertimento con la nostra collezione dei giochi più amati. Qui
             troverai recensioni, suggerimenti e discussioni appassionate su 
@@ -13,8 +13,9 @@
             per i giochi!
             </p>
         </div>
-        <div class="col12 col-md-6"><img class="imgfluid imgwow" src="img/World-of-warcraft.avif" alt="world of warcraft player"></div>
+        <div class="col-12 col-md-12 col-xl-6 d-flex justify-content-center"><img class="img-fluid imgwow" src="img/World-of-warcraft.avif" alt="world of warcraft player"></div>
     </div>
+
 
 
     

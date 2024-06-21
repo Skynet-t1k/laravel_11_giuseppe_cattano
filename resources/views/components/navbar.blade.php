@@ -11,6 +11,6 @@
           <a class="nav-link" href="{{route('games.create')}}">AddGame</a>
         </div>
       </div>
-      <div class="logo"></div>
+      <div class="logo1"></div>
     </div>
   </nav>
