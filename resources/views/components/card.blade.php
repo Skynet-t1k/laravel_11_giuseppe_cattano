@@ -1,18 +1,20 @@
 
 
 
-<div class="card shadow m-3 text-center" style="width: 22rem; height: 34rem">
-    <img src="{{Storage::url($game->img)}}" class="card-img-top img-fluid" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">{{$game->name}}</h5>
-      <p class="card-text">{{$game->review}}</p>
-      <div class="d-flex justify-content-center align-items-center mt-auto h-100">
-      <a href="{{route('games.show', compact('game'))}}" class="pt-2 btn btn-secondary">View</a>
-      <a href="{{route('games.edit', compact('game'))}}" class="pt-2 btn btn-warning mx-2">Edit</a>
-      <a href="" data-bs-toggle="modal" data-bs-target="#deleteModal" class="pt-2 btn btn-danger">Delete</a>
+
+<div class="card shadow m-3 text-center" style="width: 22rem; height: 34rem; display: flex; flex-direction: column;">
+  <img src="{{ Storage::url($game->img) }}" class="card-img-top img-fluid" alt="..." style="max-height: 50%; object-fit: cover;">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title">{{ $game->name }}</h5>
+    <p class="card-text">{{ $game->review }}</p>
+    <div class="mt-auto">
+      <a href="{{ route('games.show', compact('game')) }}" class="pt-2 btn btn-secondary">View</a>
+      <a href="{{ route('games.edit', compact('game')) }}" class="pt-2 btn btn-warning mx-2">Edit</a>
+      <a href="#" data-bs-toggle="modal" data-bs-target="#deleteModal" class="pt-2 btn btn-danger">Delete</a>
     </div>
-    </div>
+  </div>
 </div>
+
 
 
 <!-- Modal -->
@@ -32,8 +34,7 @@
           @csrf
           @method('DELETE')
           <button type="submit" class="btn btn-danger">Delete</button>
-       </form>
-        
+        </form>
       </div>
     </div>
   </div>

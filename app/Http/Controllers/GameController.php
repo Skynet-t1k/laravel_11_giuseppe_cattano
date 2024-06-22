@@ -69,7 +69,18 @@ class GameController extends Controller
      */
     public function update(Request $request, Game $game)
     {
-        $game->update($request->all());
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
+            'review' => 'required|string',
+            'img' => 'image|mimes:jpeg,png,jpg,gif,svg|max:5000',
+        ]);
+
+        if ($request->hasFile('img')) {
+            $imgPath = $request->file('img')->store('public/img');
+            $validatedData['img'] = $imgPath;
+        }
+
+        $game->update($validatedData);
         return redirect()->route('games.index')->with('message', 'Review modificata');;
     }
 
