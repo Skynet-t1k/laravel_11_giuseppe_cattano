@@ -1,3 +1,5 @@
+
+<div class="display-6">
 @if ($errors->any())
       <div class="alert alert-danger">
           <ul>
@@ -13,3 +15,4 @@
         {{ session('message') }}
     </div>
 @endif
+</div>

@@ -8,7 +8,7 @@
   <form 
   method="POST" 
   action="{{route('games.update', compact('game'))}}"
-  class="bg-body-secondary p-3 rounded-4 shadow mt-5 form"
+  class="bg-body-secondary p-3 rounded-4 shadow my-5 form"
   enctype="multipart/form-data">
   @csrf
   @method("PUT")

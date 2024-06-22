@@ -5,7 +5,8 @@
 <div class="card shadow m-3 text-center" style="width: 22rem; height: 34rem; display: flex; flex-direction: column;">
   <img src="{{ Storage::url($game->img) }}" class="card-img-top img-fluid" alt="..." style="max-height: 50%; object-fit: cover;">
   <div class="card-body d-flex flex-column">
-    <h5 class="card-title">{{ $game->name }}</h5>
+    <h3 class="card-title">{{ $game->name }}</h3>
+    <h5 class="card-title">Creato da {{ $game->user->name}}</h5>
     <p class="card-text">{{ $game->review }}</p>
     <div class="mt-auto">
       <a href="{{ route('games.show', compact('game')) }}" class="pt-2 btn btn-secondary">View</a>

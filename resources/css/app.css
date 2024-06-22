@@ -69,7 +69,7 @@ body {
   }
 
   .btn{
-    width: 72px;
+    width: 80px;
     height: 40px;
  }
 
@@ -90,6 +90,10 @@ body {
     border: 2px solid orange;
     border-radius: var(--bs-navbar-toggler-border-radius);
     transition: var(--bs-navbar-toggler-transition);
+}
+
+.formregistrati{
+    width: 375px;
 }
 
 @media screen and (max-width: 991px){
@@ -125,5 +129,12 @@ body {
         padding: 0px;
         width: 375px;
       }
+}
+ 
+@media screen and (max-width: 1200px){
 
-} 
+    .navbar{
+        width: 100%;
+
+    }
+  }

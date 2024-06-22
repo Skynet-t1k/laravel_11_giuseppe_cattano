@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Game;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class GameController extends Controller
 {
@@ -42,6 +43,7 @@ class GameController extends Controller
             $imgPath = $request->file('img')->store('public/img');
             $validatedData['img'] = $imgPath;
         }
+        $validatedData['user_id'] = Auth::user()->id;
 
         Game::create($validatedData);
 
@@ -73,6 +75,7 @@ class GameController extends Controller
             'name' => 'required|string|max:255',
             'review' => 'required|string',
             'img' => 'image|mimes:jpeg,png,jpg,gif,svg|max:5000',
+
         ]);
 
         if ($request->hasFile('img')) {
